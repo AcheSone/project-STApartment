@@ -5,16 +5,18 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="c083fde1-88de-471c-84a9-b17317a26911" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/encodings.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/module1-mybatis_puls/pom.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/module1-mybatis_puls/src/main/java/com/baidu/crud/UserTestApplication.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/module1-mybatis_puls/src/main/java/com/baidu/crud/mapper/UserMapper.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/module1-mybatis_puls/src/main/resources/application.yaml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/dataSources.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/uiDesigner.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/module1-mybatis_puls/readme.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/module1-mybatis_puls/src/main/java/com/baidu/crud/pojo/User.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/module1-mybatis_puls/src/main/java/com/baidu/crud/service/UserService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/module1-mybatis_puls/src/main/java/com/baidu/crud/service/impl/UserServiceImpl.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/module1-mybatis_puls/src/test/java/com/baidu/TestUserAutoService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/module1-mybatis_puls/src/test/java/com/baidu/TestUserCRUD.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/module1-mybatis_puls/src/main/java/com/baidu/crud/UserTestApplication.java" beforeDir="false" afterPath="$PROJECT_DIR$/module1-mybatis_puls/src/main/java/com/baidu/UserTestApplication.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/module1-mybatis_puls/src/main/java/com/baidu/crud/mapper/UserMapper.java" beforeDir="false" afterPath="$PROJECT_DIR$/module1-mybatis_puls/src/main/java/com/baidu/crud/mapper/UserMapper.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/module1-mybatis_puls/src/main/resources/application.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/module1-mybatis_puls/src/main/resources/application.yaml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -24,6 +26,7 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
+        <option value="Interface" />
         <option value="Class" />
       </list>
     </option>
@@ -55,23 +58,127 @@
   </component>
   <component name="PropertiesComponent"><![CDATA[{
   "keyToString": {
+    "RequestMappingsPanelOrder0": "0",
+    "RequestMappingsPanelOrder1": "1",
+    "RequestMappingsPanelWidth0": "75",
+    "RequestMappingsPanelWidth1": "75",
     "RunOnceActivity.OpenProjectViewOnStart": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "SHARE_PROJECT_CONFIGURATION_FILES": "true",
     "WebServerToolWindowFactoryState": "false",
     "jdk.selected.JAVA_MODULE": "17",
+    "last_opened_file_path": "D:/SGG-SZ-231224/后端工程化/11.实操项目-尚庭公寓/老师代码/pro-lease",
     "settings.editor.selected.configurable": "MavenSettings",
     "vue.rearranger.settings.migration": "true"
+  },
+  "keyToStringList": {
+    "DatabaseDriversLRU": [
+      "mysql"
+    ]
   }
 }]]></component>
-  <component name="RunManager">
-    <configuration name="UserTestApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot">
+  <component name="RecentsManager">
+    <key name="MoveClassesOrPackagesDialog.RECENTS_KEY">
+      <recent name="com.baidu" />
+    </key>
+  </component>
+  <component name="RunManager" selected="JUnit.TestUserAutoService.test2">
+    <configuration name="TestUserAutoService.test1" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="module1-mybatis_puls" />
-      <option name="SPRING_BOOT_MAIN_CLASS" value="com.baidu.crud.UserTestApplication" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.baidu.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="com.baidu" />
+      <option name="MAIN_CLASS_NAME" value="com.baidu.TestUserAutoService" />
+      <option name="METHOD_NAME" value="test1" />
+      <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <configuration name="TestUserAutoService.test2" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="module1-mybatis_puls" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.baidu.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="com.baidu" />
+      <option name="MAIN_CLASS_NAME" value="com.baidu.TestUserAutoService" />
+      <option name="METHOD_NAME" value="test2" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="TestUserAutoService.test3" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="module1-mybatis_puls" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.baidu.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="com.baidu" />
+      <option name="MAIN_CLASS_NAME" value="com.baidu.TestUserAutoService" />
+      <option name="METHOD_NAME" value="test3" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="TestUserCRUD.test2" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="module1-mybatis_puls" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.baidu.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="com.baidu" />
+      <option name="MAIN_CLASS_NAME" value="com.baidu.TestUserCRUD" />
+      <option name="METHOD_NAME" value="test2" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="TestUserCRUD.test3" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="module1-mybatis_puls" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.baidu.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="com.baidu" />
+      <option name="MAIN_CLASS_NAME" value="com.baidu.TestUserCRUD" />
+      <option name="METHOD_NAME" value="test3" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="UserTestApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot">
+      <module name="module1-mybatis_puls" />
+      <option name="SPRING_BOOT_MAIN_CLASS" value="com.baidu.UserTestApplication" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="JUnit.TestUserAutoService.test2" />
+        <item itemvalue="JUnit.TestUserAutoService.test1" />
+        <item itemvalue="JUnit.TestUserAutoService.test3" />
+        <item itemvalue="JUnit.TestUserCRUD.test3" />
+        <item itemvalue="JUnit.TestUserCRUD.test2" />
+      </list>
+    </recent_temporary>
   </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
@@ -81,11 +188,23 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1712041910948</updated>
-      <workItem from="1712041912197" duration="1894000" />
+      <workItem from="1712041912197" duration="10055000" />
     </task>
+    <task id="LOCAL-00001" summary="这是一个测试mybatis——plus的提交">
+      <created>1712045418305</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1712045418305</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="这是一个测试mybatis——plus的提交" />
+    <option name="LAST_COMMIT_MESSAGE" value="这是一个测试mybatis——plus的提交" />
   </component>
 </project>
