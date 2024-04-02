@@ -24,7 +24,7 @@ public class TestUserCRUD {
 
     @Test
     public void test2(){
-        User user = new User(null,"陈思诚",55,"777777@163.com");
+        User user = new User(null,"陈思诚",55,"777777@163.com",1);
         userMapper.insert(user);
         System.out.println(userMapper.selectById(user.getId()));
     }
@@ -32,6 +32,7 @@ public class TestUserCRUD {
     @Test
     public void test3(){
         userMapper.selectList(null).forEach(System.out::println);
+        
     }
 
 }

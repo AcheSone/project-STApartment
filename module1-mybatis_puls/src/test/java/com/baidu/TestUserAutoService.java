@@ -18,7 +18,7 @@ public class TestUserAutoService {
         userService.list().forEach(System.out::println);
 
         //通过判断对象中的主键值是否为空，是则执行插入操作，否则执行修改操作
-        userService.saveOrUpdate(new User(null,"王浩栋",33,"haodong11@qq.com"));
+        userService.saveOrUpdate(new User(null,"王浩栋",33,"haodong11@qq.com",1));
     }
 
     @Test
@@ -31,5 +31,6 @@ public class TestUserAutoService {
     public void test3(){
         System.out.println(userService.removeById(6));
     }
+
 
 }
