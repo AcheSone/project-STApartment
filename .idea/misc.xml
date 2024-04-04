@@ -6,7 +6,19 @@
       <list>
         <option value="$PROJECT_DIR$/pom.xml" />
         <option value="$PROJECT_DIR$/module1-mybatis_puls/pom.xml" />
+        <option value="$PROJECT_DIR$/module2-minion/pom.xml" />
+        <option value="$PROJECT_DIR$/pro-STApartment-lease/pom.xml" />
+        <option value="$PROJECT_DIR$/pro-lease-STApartment/pom.xml" />
       </list>
+    </option>
+    <option name="ignoredFiles">
+      <set>
+        <option value="$PROJECT_DIR$/common/pom.xml" />
+        <option value="$PROJECT_DIR$/pro-STApartment/common/pom.xml" />
+        <option value="$PROJECT_DIR$/pro-STApartment/model/pom.xml" />
+        <option value="$PROJECT_DIR$/pro-STApartment/web/pom.xml" />
+        <option value="$PROJECT_DIR$/pro-STApartment/web/web-admin/pom.xml" />
+      </set>
     </option>
   </component>
   <component name="ProjectRootManager" version="2" languageLevel="JDK_17" default="true" project-jdk-name="17" project-jdk-type="JavaSDK">

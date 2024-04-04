@@ -5,15 +5,29 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="c083fde1-88de-471c-84a9-b17317a26911" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/module1-mybatis_puls/src/main/java/com/baidu/crud/config/UserConfiguration.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/module1-mybatis_puls/src/test/java/com/baidu/TestDeletedAndPaging.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/module1-mybatis_puls/src/test/java/com/baidu/TestTwoWrapper.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/module2-minion/pom.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/module2-minion/src/main/java/com/baidu/App.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/pro-lease-STApartment/common/pom.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/pro-lease-STApartment/common/readme.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/pro-lease-STApartment/common/src/main/java/com/baidu/lease/common/mybatisplus/AdminWebApplication.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/pro-lease-STApartment/model/pom.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/pro-lease-STApartment/model/readme.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/pro-lease-STApartment/model/src/main/java/com/baidu/lease/model/readme.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/pro-lease-STApartment/pom.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/pro-lease-STApartment/web/pom.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/pro-lease-STApartment/web/web-admin/pom.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/pro-lease-STApartment/web/web-admin/src/main/java/com/baidu/lease/AdminWebApplication.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/pro-lease-STApartment/web/web-admin/src/main/resources/application.yaml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/pro-lease-STApartment/web/web-app/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/encodings.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/encodings.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/module1-mybatis_puls/readme.md" beforeDir="false" afterPath="$PROJECT_DIR$/module1-mybatis_puls/readme.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/module1-mybatis_puls/src/main/java/com/baidu/crud/pojo/User.java" beforeDir="false" afterPath="$PROJECT_DIR$/module1-mybatis_puls/src/main/java/com/baidu/crud/pojo/User.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/module1-mybatis_puls/src/main/java/com/baidu/UserTestApplication.java" beforeDir="false" afterPath="$PROJECT_DIR$/module1-mybatis_puls/src/main/java/com/baidu/UserTestApplication.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/module1-mybatis_puls/src/main/java/com/baidu/crud/service/impl/UserServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/module1-mybatis_puls/src/main/java/com/baidu/crud/service/impl/UserServiceImpl.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/module1-mybatis_puls/src/main/resources/application.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/module1-mybatis_puls/src/main/resources/application.yaml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/module1-mybatis_puls/src/test/java/com/baidu/TestUserAutoService.java" beforeDir="false" afterPath="$PROJECT_DIR$/module1-mybatis_puls/src/test/java/com/baidu/TestUserAutoService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/module1-mybatis_puls/src/test/java/com/baidu/TestUserCRUD.java" beforeDir="false" afterPath="$PROJECT_DIR$/module1-mybatis_puls/src/test/java/com/baidu/TestUserCRUD.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/module1-mybatis_puls/src/test/java/com/baidu/TestDeletedAndPaging.java" beforeDir="false" afterPath="$PROJECT_DIR$/module1-mybatis_puls/src/test/java/com/baidu/TestDeletedAndPaging.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -64,9 +78,13 @@
     "SHARE_PROJECT_CONFIGURATION_FILES": "true",
     "WebServerToolWindowFactoryState": "false",
     "jdk.selected.JAVA_MODULE": "17",
-    "last_opened_file_path": "D:/SGG-SZ-231224/后端工程化/11.实操项目-尚庭公寓/老师代码/pro-lease",
+    "last_opened_file_path": "D:/SGG-SZ-231224/srctest/STapartment/project-STapartment/project-STApartment/pro-lease-STApartment/common/src/main/java/com/baidu/lease/common",
     "nodejs_package_manager_path": "npm",
+    "project.structure.last.edited": "Modules",
+    "project.structure.proportion": "0.15",
+    "project.structure.side.proportion": "0.47662836",
     "settings.editor.selected.configurable": "MavenSettings",
+    "spring.configuration.checksum": "8cfbacd5231d575d6d7857c58a47d0c1",
     "vue.rearranger.settings.migration": "true"
   },
   "keyToStringList": {
@@ -76,11 +94,32 @@
   }
 }]]></component>
   <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="D:\SGG-SZ-231224\srctest\STapartment\project-STapartment\project-STApartment\pro-lease-STApartment\common\src\main\java\com\baidu\lease\common" />
+      <recent name="D:\SGG-SZ-231224\srctest\STapartment\project-STapartment\project-STApartment\pro-lease-STApartment\web\web-admin\src\main\java\com\baidu\lease\web\admin" />
+      <recent name="D:\SGG-SZ-231224\srctest\STapartment\project-STapartment\project-STApartment\pro-lease-STApartment\web\web-admin\src\main\resources" />
+    </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="D:\SGG-SZ-231224\srctest\STapartment\project-STapartment\project-STApartment\pro-lease-STApartment\model\src\main\java\com\baidu\lease\model" />
+    </key>
     <key name="MoveClassesOrPackagesDialog.RECENTS_KEY">
       <recent name="com.baidu" />
     </key>
   </component>
-  <component name="RunManager" selected="JUnit.TestDeletedAndPaging.test2">
+  <component name="RunManager" selected="Application.App">
+    <configuration name="App" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="com.baidu.App" />
+      <module name="module2-minion" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.baidu.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <configuration name="TestDeletedAndPaging.test1" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="module1-mybatis_puls" />
       <extension name="coverage">
@@ -108,22 +147,6 @@
       <option name="PACKAGE_NAME" value="com.baidu" />
       <option name="MAIN_CLASS_NAME" value="com.baidu.TestDeletedAndPaging" />
       <option name="METHOD_NAME" value="test2" />
-      <option name="TEST_OBJECT" value="method" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="TestTwoWrapper.test4" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="module1-mybatis_puls" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="com.baidu.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="com.baidu" />
-      <option name="MAIN_CLASS_NAME" value="com.baidu.TestTwoWrapper" />
-      <option name="METHOD_NAME" value="test4" />
       <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
@@ -161,6 +184,13 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <configuration name="AdminWebApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot">
+      <module name="web-admin" />
+      <option name="SPRING_BOOT_MAIN_CLASS" value="com.baidu.lease.AdminWebApplication" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <configuration name="UserTestApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot">
       <module name="module1-mybatis_puls" />
       <option name="SPRING_BOOT_MAIN_CLASS" value="com.baidu.UserTestApplication" />
@@ -170,11 +200,11 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="JUnit.TestDeletedAndPaging.test2" />
+        <item itemvalue="Application.App" />
         <item itemvalue="JUnit.TestDeletedAndPaging.test1" />
+        <item itemvalue="JUnit.TestDeletedAndPaging.test2" />
         <item itemvalue="JUnit.TestUserCRUD.test3" />
         <item itemvalue="JUnit.TestUserCRUD.test2" />
-        <item itemvalue="JUnit.TestTwoWrapper.test4" />
       </list>
     </recent_temporary>
   </component>
@@ -186,7 +216,10 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1712041910948</updated>
-      <workItem from="1712041912197" duration="18348000" />
+      <workItem from="1712041912197" duration="18772000" />
+      <workItem from="1712104218689" duration="5752000" />
+      <workItem from="1712123885623" duration="6395000" />
+      <workItem from="1712193116337" duration="10065000" />
     </task>
     <task id="LOCAL-00001" summary="这是一个测试mybatis——plus的提交">
       <created>1712045418305</created>
@@ -202,7 +235,14 @@
       <option name="project" value="LOCAL" />
       <updated>1712055616170</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary="2024.4.2&#10;上传首个尚庭公寓需要使用的技术测试模块工程（专门测试的工程）">
+      <created>1712064473823</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1712064473823</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -211,6 +251,7 @@
   <component name="VcsManagerConfiguration">
     <MESSAGE value="这是一个测试mybatis——plus的提交" />
     <MESSAGE value="这是第二次提交" />
-    <option name="LAST_COMMIT_MESSAGE" value="这是第二次提交" />
+    <MESSAGE value="2024.4.2&#10;上传首个尚庭公寓需要使用的技术测试模块工程（专门测试的工程）" />
+    <option name="LAST_COMMIT_MESSAGE" value="2024.4.2&#10;上传首个尚庭公寓需要使用的技术测试模块工程（专门测试的工程）" />
   </component>
 </project>

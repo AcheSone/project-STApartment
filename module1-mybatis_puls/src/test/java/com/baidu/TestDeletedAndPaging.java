@@ -18,8 +18,9 @@ public class TestDeletedAndPaging {
     public void test1(){
         LambdaQueryWrapper<User> lambdaQueryWrapper = new LambdaQueryWrapper<>();
         /*User userServiceById = userService.getById(1);*/
-        lambdaQueryWrapper.eq(User::getId,3);
+        lambdaQueryWrapper.eq(User::getId,4);
         System.out.println(userService.remove(lambdaQueryWrapper));
+        throw new RuntimeException();
     }
 
     @Test

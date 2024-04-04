@@ -1,9 +1,38 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="Encoding">
+    <file url="file://$PROJECT_DIR$/common/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/common/src/main/resources" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/module1-mybatis_puls/src/main/java" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/module1-mybatis_puls/src/main/resources" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/module2-minion/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/module2-minion/src/main/resources" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/pro-STApartment-lease/common/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/pro-STApartment-lease/common/src/main/resources" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/pro-STApartment-lease/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/pro-STApartment-lease/src/main/resources" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/pro-STApartment/common/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/pro-STApartment/common/src/main/resources" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/pro-STApartment/model/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/pro-STApartment/model/src/main/resources" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/pro-STApartment/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/pro-STApartment/src/main/resources" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/pro-STApartment/web/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/pro-STApartment/web/src/main/resources" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/pro-STApartment/web/web-admin/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/pro-STApartment/web/web-admin/src/main/resources" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/pro-STApartment/web/web-app/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/pro-STApartment/web/web-app/src/main/resources" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/pro-lease-STApartment/common/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/pro-lease-STApartment/model/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/pro-lease-STApartment/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/pro-lease-STApartment/src/main/resources" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/pro-lease-STApartment/web/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/pro-lease-STApartment/web/src/main/resources" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/pro-lease-STApartment/web/web-admin/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/pro-lease-STApartment/web/web-app/src/main/java" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/src/main/java" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/src/main/resources" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/../../../../../software/maven-localRepository/repository/org/springframework/boot/spring-boot-starter-parent/3.0.5/src/main/resources" charset="UTF-8" />
   </component>
 </project>

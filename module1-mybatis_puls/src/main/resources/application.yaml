@@ -20,7 +20,7 @@ mybatis-plus:
     log-impl: org.apache.ibatis.logging.stdout.StdOutImpl
   logging:
   level:
-    com.atguigu.mapper: debug
+    com.baidu.mapper: debug
   #上面的作用是，为日志功能设置为debug模式。此时我们能看见SQL的执行语句
 
 
