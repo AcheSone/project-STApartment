@@ -1,17 +1,22 @@
-#声明端口
-server:
-  port: 8080
+##声明端口
+#server:
+#  port: 8080
 
-
-  spring:
-    datasource:
-      driver-class-name: com.mysql.cj.jdbc.Driver
-      url: jdbc:mysql://192.128.179.128:3306/lease?useUnicode=true&characterEncoding=utf-8&useSSL=false&allowPublicKeyRetrieval=true&serverTimezone=GMT%2b8
-      username: root
-      password: root
-
+spring:
+  datasource:
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    url: jdbc:mysql://192.168.179.128:3306/lease
+    username: root
+    password: root
 
   #用于打印框架生成的sql语句，便于调试的日志配置
-  mybatis-plus:
-    configuration:
-      log-impl: org.apache.ibatis.logging.stdout.StdOutImpl
+mybatis-plus:
+  configuration:
+    log-impl: org.apache.ibatis.logging.stdout.StdOutImpl
+
+      #用于配置全局逻辑删除，默认值为0，删除为1，字段名为isDeleted
+  global-config:
+      db-config:
+        logic-delete-value: 1
+        logic-delete-field: isDeleted
+        logic-not-delete-value: 0
