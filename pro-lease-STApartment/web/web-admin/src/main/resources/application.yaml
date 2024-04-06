@@ -1,3 +1,4 @@
+#配置信息文件application.yaml只能有一个起作用，所以，在定义多个时，要进行声明，或者说仅定义一个
 ##声明端口
 #server:
 #  port: 8080
@@ -9,6 +10,11 @@ spring:
     username: root
     password: root
 
+#这里引入了minion的配置文件
+  profiles:
+     active: minio
+
+      #--------------------------------------------------
   #用于打印框架生成的sql语句，便于调试的日志配置
 mybatis-plus:
   configuration:
@@ -20,3 +26,6 @@ mybatis-plus:
         logic-delete-value: 1
         logic-delete-field: isDeleted
         logic-not-delete-value: 0
+
+
+

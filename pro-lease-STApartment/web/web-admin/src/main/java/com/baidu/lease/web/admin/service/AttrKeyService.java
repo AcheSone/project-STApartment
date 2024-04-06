@@ -12,5 +12,6 @@ import java.util.List;
 * @createDate 2023-07-24 15:48:00
 */
 public interface AttrKeyService extends IService<AttrKey> {
+    List<AttrKeyVo> listAttrInfo();
 
 }

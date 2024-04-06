@@ -3,6 +3,7 @@ package com.baidu.lease.web.admin.service.impl;
 import com.baidu.lease.model.entity.ApartmentInfo;
 import com.baidu.lease.web.admin.mapper.ApartmentInfoMapper;
 import com.baidu.lease.web.admin.service.ApartmentInfoService;
+import com.baidu.lease.web.admin.vo.apartment.ApartmentSubmitVo;
 import com.baomidou.mybatisplus.extension.service.impl.ServiceImpl;
 import org.springframework.stereotype.Service;
 
@@ -15,6 +16,10 @@ import org.springframework.stereotype.Service;
 public class ApartmentInfoServiceImpl extends ServiceImpl<ApartmentInfoMapper, ApartmentInfo>
         implements ApartmentInfoService {
 
+    @Override
+    public void saveOrUpdateApartment(ApartmentSubmitVo apartmentSubmitVo) {
+        //因为这个操作是综合了查询和更新操作的
+    }
 }
 
 

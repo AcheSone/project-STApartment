@@ -3,5 +3,31 @@
         PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
         "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
 <mapper namespace="com.baidu.lease.web.admin.mapper.AttrKeyMapper">
+    <select id="listAttrInfo" resultMap="BaseResultMap">
+        select k.id,
+               k.name as key_name,
+               v.id as value_id,
+               v.name as value_name,
+               v.attr_key_id as key_id
+        from attr_key as k
+        left join
+            attr_value as v
+        on k.id = v.attr_key_id
+        and v.is_deleted = 0
+        where k.is_deleted = 0;
+    </select>
+    <!--因为是自定义的条件查询，所以要进行is_deleted属性的筛选，使用mybatis-plus提供的查询则无需如此-->
 
+    <!--对象映射之一对多，所以使用collection，而collection使用的类型映射属性是ofType-->
+    <resultMap id="BaseResultMap" type="com.baidu.lease.web.admin.vo.attr.AttrKeyVo">
+        <id property="id" column="id"/>
+        <result property="name" column="key_name"/>
+        <collection property="attrValueList" ofType="com.baidu.lease.model.entity.AttrValue">
+            <id property="id" column="value_id"/>
+            <result property="name" column="value_name"/>
+            <result property="attrKeyId" column="key_id"/>
+        </collection>
+    </resultMap>
+
+    <!--查询所有的AttrKey表的值-->
 </mapper>

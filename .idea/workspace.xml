@@ -5,7 +5,35 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="c083fde1-88de-471c-84a9-b17317a26911" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/pro-lease-STApartment/common/src/main/java/com/baidu/lease/common/exception/GlobalExceptionHandler.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/pro-lease-STApartment/common/src/main/java/com/baidu/lease/common/minio/MinioConfiguration.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/pro-lease-STApartment/common/src/main/java/com/baidu/lease/common/minio/MinioProperties.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/pro-lease-STApartment/web/web-admin/src/main/resources/application-minio.yaml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pro-lease-STApartment/common/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pro-lease-STApartment/common/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pro-lease-STApartment/common/src/main/java/com/baidu/lease/common/mybatisplus/AdminWebApplication.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/pro-lease-STApartment/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pro-lease-STApartment/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pro-lease-STApartment/readme.md" beforeDir="false" afterPath="$PROJECT_DIR$/pro-lease-STApartment/readme.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pro-lease-STApartment/web/web-admin/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pro-lease-STApartment/web/web-admin/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pro-lease-STApartment/web/web-admin/src/main/java/com/baidu/lease/web/admin/controller/apartment/ApartmentController.java" beforeDir="false" afterPath="$PROJECT_DIR$/pro-lease-STApartment/web/web-admin/src/main/java/com/baidu/lease/web/admin/controller/apartment/ApartmentController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pro-lease-STApartment/web/web-admin/src/main/java/com/baidu/lease/web/admin/controller/apartment/AttrController.java" beforeDir="false" afterPath="$PROJECT_DIR$/pro-lease-STApartment/web/web-admin/src/main/java/com/baidu/lease/web/admin/controller/apartment/AttrController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pro-lease-STApartment/web/web-admin/src/main/java/com/baidu/lease/web/admin/controller/apartment/FeeController.java" beforeDir="false" afterPath="$PROJECT_DIR$/pro-lease-STApartment/web/web-admin/src/main/java/com/baidu/lease/web/admin/controller/apartment/FeeController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pro-lease-STApartment/web/web-admin/src/main/java/com/baidu/lease/web/admin/controller/apartment/FileUploadController.java" beforeDir="false" afterPath="$PROJECT_DIR$/pro-lease-STApartment/web/web-admin/src/main/java/com/baidu/lease/web/admin/controller/apartment/FileUploadController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pro-lease-STApartment/web/web-admin/src/main/java/com/baidu/lease/web/admin/controller/apartment/RegionInfoController.java" beforeDir="false" afterPath="$PROJECT_DIR$/pro-lease-STApartment/web/web-admin/src/main/java/com/baidu/lease/web/admin/controller/apartment/RegionInfoController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pro-lease-STApartment/web/web-admin/src/main/java/com/baidu/lease/web/admin/mapper/AttrKeyMapper.java" beforeDir="false" afterPath="$PROJECT_DIR$/pro-lease-STApartment/web/web-admin/src/main/java/com/baidu/lease/web/admin/mapper/AttrKeyMapper.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pro-lease-STApartment/web/web-admin/src/main/java/com/baidu/lease/web/admin/mapper/FeeKeyMapper.java" beforeDir="false" afterPath="$PROJECT_DIR$/pro-lease-STApartment/web/web-admin/src/main/java/com/baidu/lease/web/admin/mapper/FeeKeyMapper.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pro-lease-STApartment/web/web-admin/src/main/java/com/baidu/lease/web/admin/service/ApartmentInfoService.java" beforeDir="false" afterPath="$PROJECT_DIR$/pro-lease-STApartment/web/web-admin/src/main/java/com/baidu/lease/web/admin/service/ApartmentInfoService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pro-lease-STApartment/web/web-admin/src/main/java/com/baidu/lease/web/admin/service/AttrKeyService.java" beforeDir="false" afterPath="$PROJECT_DIR$/pro-lease-STApartment/web/web-admin/src/main/java/com/baidu/lease/web/admin/service/AttrKeyService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pro-lease-STApartment/web/web-admin/src/main/java/com/baidu/lease/web/admin/service/FeeKeyService.java" beforeDir="false" afterPath="$PROJECT_DIR$/pro-lease-STApartment/web/web-admin/src/main/java/com/baidu/lease/web/admin/service/FeeKeyService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pro-lease-STApartment/web/web-admin/src/main/java/com/baidu/lease/web/admin/service/FileService.java" beforeDir="false" afterPath="$PROJECT_DIR$/pro-lease-STApartment/web/web-admin/src/main/java/com/baidu/lease/web/admin/service/FileService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pro-lease-STApartment/web/web-admin/src/main/java/com/baidu/lease/web/admin/service/impl/ApartmentInfoServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/pro-lease-STApartment/web/web-admin/src/main/java/com/baidu/lease/web/admin/service/impl/ApartmentInfoServiceImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pro-lease-STApartment/web/web-admin/src/main/java/com/baidu/lease/web/admin/service/impl/AttrKeyServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/pro-lease-STApartment/web/web-admin/src/main/java/com/baidu/lease/web/admin/service/impl/AttrKeyServiceImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pro-lease-STApartment/web/web-admin/src/main/java/com/baidu/lease/web/admin/service/impl/FeeKeyServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/pro-lease-STApartment/web/web-admin/src/main/java/com/baidu/lease/web/admin/service/impl/FeeKeyServiceImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pro-lease-STApartment/web/web-admin/src/main/java/com/baidu/lease/web/admin/service/impl/FileServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/pro-lease-STApartment/web/web-admin/src/main/java/com/baidu/lease/web/admin/service/impl/FileServiceImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pro-lease-STApartment/web/web-admin/src/main/java/com/baidu/lease/web/admin/vo/readme.md" beforeDir="false" afterPath="$PROJECT_DIR$/pro-lease-STApartment/web/web-admin/src/main/java/com/baidu/lease/web/admin/vo/readme.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pro-lease-STApartment/web/web-admin/src/main/resources/application.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/pro-lease-STApartment/web/web-admin/src/main/resources/application.yaml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pro-lease-STApartment/web/web-admin/src/main/resources/mapper/AttrKeyMapper.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pro-lease-STApartment/web/web-admin/src/main/resources/mapper/AttrKeyMapper.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pro-lease-STApartment/web/web-admin/src/main/resources/mapper/FeeKeyMapper.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pro-lease-STApartment/web/web-admin/src/main/resources/mapper/FeeKeyMapper.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -61,8 +89,8 @@
     "project.structure.last.edited": "Modules",
     "project.structure.proportion": "0.15",
     "project.structure.side.proportion": "0.47662836",
-    "settings.editor.selected.configurable": "org.jetbrains.plugins.github.ui.GithubSettingsConfigurable",
-    "spring.configuration.checksum": "5a45f081a2369fdc3dae3a05f6bec585",
+    "settings.editor.selected.configurable": "spring.boot",
+    "spring.configuration.checksum": "a9a195a6d4f88f8c4dac3782999b44c1",
     "vue.rearranger.settings.migration": "true"
   },
   "keyToStringList": {
@@ -147,16 +175,23 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="AdminWebApplication (1)" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot">
-      <module name="common" />
-      <option name="SPRING_BOOT_MAIN_CLASS" value="com.baidu.lease.common.mybatisplus.AdminWebApplication" />
+    <configuration name="AdminWebApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot">
+      <module name="web-admin" />
+      <option name="SPRING_BOOT_MAIN_CLASS" value="com.baidu.lease.AdminWebApplication" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="AdminWebApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot">
-      <module name="web-admin" />
-      <option name="SPRING_BOOT_MAIN_CLASS" value="com.baidu.lease.AdminWebApplication" />
+    <configuration name="Knife4jApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot">
+      <module name="module3-knife4j" />
+      <option name="SPRING_BOOT_MAIN_CLASS" value="com.gmail.Knife4jApplication" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="MybatisPlusConfiguration" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot">
+      <module name="common" />
+      <option name="SPRING_BOOT_MAIN_CLASS" value="com.baidu.lease.common.mybatisplus.MybatisPlusConfiguration" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
@@ -188,7 +223,8 @@
       <workItem from="1712104218689" duration="5752000" />
       <workItem from="1712123885623" duration="6395000" />
       <workItem from="1712193116337" duration="10518000" />
-      <workItem from="1712282427228" duration="27126000" />
+      <workItem from="1712282427228" duration="27440000" />
+      <workItem from="1712366135958" duration="25335000" />
     </task>
     <task id="LOCAL-00001" summary="这是一个测试mybatis——plus的提交">
       <created>1712045418305</created>
@@ -225,7 +261,14 @@
       <option name="project" value="LOCAL" />
       <updated>1712329390195</updated>
     </task>
-    <option name="localTasksCounter" value="6" />
+    <task id="LOCAL-00006" summary="2024.4.5&#10;以做少许功能，数据类型转换已完成">
+      <created>1712336020556</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1712336020556</updated>
+    </task>
+    <option name="localTasksCounter" value="7" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -238,5 +281,9 @@
     <MESSAGE value="2024.4.5&#10;尚庭公寓基础环境搭建成功" />
     <MESSAGE value="2024.4.5&#10;以做少许功能，数据类型转换已完成" />
     <option name="LAST_COMMIT_MESSAGE" value="2024.4.5&#10;以做少许功能，数据类型转换已完成" />
+  </component>
+  <component name="XSLT-Support.FileAssociations.UIState">
+    <expand />
+    <select />
   </component>
 </project>

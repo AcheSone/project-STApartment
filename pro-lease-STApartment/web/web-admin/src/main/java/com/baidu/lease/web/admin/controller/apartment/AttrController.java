@@ -7,6 +7,7 @@ import com.baidu.lease.model.entity.AttrValue;
 import com.baidu.lease.web.admin.service.AttrKeyService;
 import com.baidu.lease.web.admin.service.AttrValueService;
 import com.baidu.lease.web.admin.vo.attr.AttrKeyVo;
+import com.baomidou.mybatisplus.core.conditions.query.LambdaQueryWrapper;
 import io.swagger.v3.oas.annotations.Operation;
 import io.swagger.v3.oas.annotations.tags.Tag;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -28,6 +29,7 @@ public class AttrController {
 
     @Autowired
     private AttrKeyService attrKeyService;
+    @Autowired
     private AttrValueService attrValueService;
 
 
@@ -49,19 +51,28 @@ public class AttrController {
     @Operation(summary = "查询全部属性名称和属性值列表")
     @GetMapping("list")
     public Result<List<AttrKeyVo>> listAttrInfo() {
-
-        return Result.ok();
+        List<AttrKeyVo> attrKeyVos = attrKeyService.listAttrInfo();
+        return Result.ok(attrKeyVos);
     }
 
     @Operation(summary = "根据id删除属性名称")
     @DeleteMapping("key/deleteById")
     public Result removeAttrKeyById(@RequestParam Long attrKeyId) {
+        attrKeyService.removeById(attrKeyId);
+        //删除名称时，也就是一个大标签时，所有的小标签也应该被删除
+
+        LambdaQueryWrapper<AttrValue> lambdaQueryWrapper = new LambdaQueryWrapper<>();
+        //小标签的的字段依赖大标签的主键，所以根据大标签id删除
+        lambdaQueryWrapper.eq(AttrValue::getAttrKeyId,attrKeyId);
+        attrValueService.remove(lambdaQueryWrapper);
+
         return Result.ok();
     }
 
     @Operation(summary = "根据id删除属性值")
     @DeleteMapping("value/deleteById")
     public Result removeAttrValueById(@RequestParam Long id) {
+        attrValueService.removeById(id);
         return Result.ok();
     }
 

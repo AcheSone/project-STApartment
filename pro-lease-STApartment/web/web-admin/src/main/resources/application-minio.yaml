@@ -1,0 +1,7 @@
+minio:
+  endpoint: http://192.168.179.128:9000
+  #9000是访问桶资源的端口号，而9001是访问minion管理系统的端口号
+  access-key: MgyotVWRbC7XKrIEr9Jx
+  secret-key: arASWDQry4FZfVwspKz4tl0QApFpIxB3JLWEeIM7
+  bucket-name: apartmentjpg
+  #这里是minion的桶名称，到时候再写吧

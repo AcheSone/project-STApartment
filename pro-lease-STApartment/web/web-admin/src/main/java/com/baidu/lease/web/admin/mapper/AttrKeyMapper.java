@@ -1,7 +1,10 @@
 package com.baidu.lease.web.admin.mapper;
 
 import com.baidu.lease.model.entity.AttrKey;
+import com.baidu.lease.web.admin.vo.attr.AttrKeyVo;
 import com.baomidou.mybatisplus.core.mapper.BaseMapper;
+
+import java.util.List;
 
 /**
 * @author liubo
@@ -10,6 +13,7 @@ import com.baomidou.mybatisplus.core.mapper.BaseMapper;
 * @Entity com.baidu.lease.model.AttrKey
 */
 public interface AttrKeyMapper extends BaseMapper<AttrKey> {
+    List<AttrKeyVo> listAttrInfo();
 
 }
 
