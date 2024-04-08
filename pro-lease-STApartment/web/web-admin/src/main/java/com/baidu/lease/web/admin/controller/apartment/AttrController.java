@@ -10,9 +10,11 @@ import com.baidu.lease.web.admin.vo.attr.AttrKeyVo;
 import com.baomidou.mybatisplus.core.conditions.query.LambdaQueryWrapper;
 import io.swagger.v3.oas.annotations.Operation;
 import io.swagger.v3.oas.annotations.tags.Tag;
+import org.springframework.beans.BeanUtils;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 
+import java.util.ArrayList;
 import java.util.List;
 
 
@@ -51,7 +53,46 @@ public class AttrController {
     @Operation(summary = "查询全部属性名称和属性值列表")
     @GetMapping("list")
     public Result<List<AttrKeyVo>> listAttrInfo() {
+
+        //实现方式一
+        //1.先查询所有的名称
+        //2.再迭代每一个名称，去查询对应的值列表
+
+
+        //这里的思想很简单，因为Key和Value不是同一张表，而是通过KeyID联系起来的。所以用查询到的AttrKeyList所有的值，
+        // 通过循环，一个一个进行查询并且将每一个Key对应的Id给予Value使用，将查询到的Value集合和Key值对应上，
+        // 并设置进相应的逻辑合集vo对象集合，也就是纯使用mybatis-plus进行对多的操作。
+
+        // 不建议使用此操作，更建议使用在mapper自编写select语句，因为频繁的查询操作会降低服务器性能。
+        /*List<AttrKey> attrKeyList = attrKeyService.list();
+        List<AttrKeyVo> attrKeyVoList = new ArrayList<>(attrKeyList.size());
+        attrKeyList.forEach(attrKey -> {
+            List<AttrValue> attrValueList = attrValueService.list(new LambdaQueryWrapper<AttrValue>()
+            .eq(AttrValue::getAttrKeyId, attrKey.getId()));
+
+            AttrKeyVo attrKeyVo = new AttrKeyVo();
+            BeanUtils.copyProperties(attrKey,attrKeyVo);
+            //attrKeyVo.setId(attrKey.getId());
+            //attrKeyVo.setName(attrKey.getName());
+            attrKeyVo.setAttrValueList(attrValueList);
+            attrKeyVoList.add(attrKeyVo);
+        });*/
+
+
         List<AttrKeyVo> attrKeyVos = attrKeyService.listAttrInfo();
+
+
+        /*List<AttrKeyVo> attrKeyVoList = new ArrayList<>();
+        List<AttrKey> attrKeyList = attrKeyService.list();
+        attrKeyList.forEach(key -> {
+                    LambdaQueryWrapper<AttrValue> attrValueLambdaQueryWrapper = new LambdaQueryWrapper<AttrValue>().eq(AttrValue::getAttrKeyId, key.getId());
+                    List<AttrValue> list = attrValueService.list(attrValueLambdaQueryWrapper);
+
+                    AttrKeyVo attrKeyVo = new AttrKeyVo();
+                    attrKeyVo.setAttrValueList(list);
+                    attrKeyVoList.add(attrKeyVo);
+                }
+        );*/
         return Result.ok(attrKeyVos);
     }
 
@@ -63,7 +104,7 @@ public class AttrController {
 
         LambdaQueryWrapper<AttrValue> lambdaQueryWrapper = new LambdaQueryWrapper<>();
         //小标签的的字段依赖大标签的主键，所以根据大标签id删除
-        lambdaQueryWrapper.eq(AttrValue::getAttrKeyId,attrKeyId);
+        lambdaQueryWrapper.eq(AttrValue::getAttrKeyId, attrKeyId);
         attrValueService.remove(lambdaQueryWrapper);
 
         return Result.ok();

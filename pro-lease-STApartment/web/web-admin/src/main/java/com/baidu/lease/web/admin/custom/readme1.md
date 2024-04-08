@@ -2,7 +2,8 @@
 
 1标签管理LabelController类，所谓的标签管理，
 
-            (通过SpringMVC中的WebDataBinder实现，而WebDataBinder依赖于接口Converter)
+            (若是传递参数，则通过SpringMVC中的WebDataBinder实现，而WebDataBinder依赖于接口Converter)
+            (若是传递的是请求体，则通过SpringMVC的HTTPMessageConverter实现，@JsonValue注解)
             第一步.就是前端传输一个代表着某个属性的int数值到后端
             第二步，后端负责将这个int数值，转换成对应的枚举类对象
             
@@ -32,6 +33,6 @@
 
 3.关于前端传后端、后端传数据库、后端传前端之间的类型转换
 
-    ·前端传后端转换比较复杂，要实现Converter转换器，mybatis提供的
+    ·前端后端传参（请求参数）转换比较复杂，要实现Converter转换器，mybatis-plus提供的
     ·后端传数据库转换使用@EnumValue注解注释标签枚举类即可，mybatis提供的
-    ·后端传前端，使用@JsonValue注解修饰注释标签枚举类即可，SpringMVC提供的。
+    ·前端后端相互传递请求体参数，使用@JsonValue注解修饰注释标签枚举类即可，SpringMVC提供的。

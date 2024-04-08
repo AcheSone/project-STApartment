@@ -1,0 +1,7 @@
+通过minion上传文件的步骤
+1.创建minion的属性配置文件，为其配置密码和桶连接等信息
+2.创建对应的属性配置类，通过@ConfigurationProperties注解声明
+3.创建minion的主要配置类，通过@EnableConfigurationProperties声明配置类，将属性配置类纳入IOC容器管理
+4.在minion配置类中声明一个MinionClient对象的bean容器，（minion的连接对象），通过该对象进行文件上传的操作
+5.为该对象设置对应的属性配置类的各种连接属性，并且进行桶判断是否存在，不存在则创建，避免异常信息
+6.设置桶的权限（JSON字符串格式），并将权限设置进连接对象中

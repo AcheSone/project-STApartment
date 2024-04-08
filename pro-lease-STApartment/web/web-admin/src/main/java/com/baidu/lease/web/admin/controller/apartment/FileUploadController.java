@@ -26,10 +26,10 @@ public class FileUploadController {
     @Autowired
     private FileService fileService;
 
+    //本项目上传文件的本质是，通过minion技术将文件上传到服务器，然后将我们指定的访问名称路径URL存入数据库。
     @Operation(summary = "上传文件")
     @PostMapping("upload")
-    public Result<String> upload(@RequestParam MultipartFile file) throws ServerException, InsufficientDataException, ErrorResponseException,
-            IOException, NoSuchAlgorithmException, InvalidKeyException, InvalidResponseException, XmlParserException, InternalException {
+    public Result<String> upload(@RequestParam MultipartFile file) throws Exception {
         String url = fileService.upload(file);
         return Result.ok();
     }
