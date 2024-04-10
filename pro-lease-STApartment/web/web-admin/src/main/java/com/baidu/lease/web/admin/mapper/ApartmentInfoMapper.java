@@ -1,10 +1,13 @@
 package com.baidu.lease.web.admin.mapper;
 
 import com.baidu.lease.model.entity.ApartmentInfo;
+import com.baidu.lease.model.entity.RoomInfo;
 import com.baidu.lease.web.admin.vo.apartment.ApartmentItemVo;
 import com.baidu.lease.web.admin.vo.apartment.ApartmentQueryVo;
 import com.baomidou.mybatisplus.core.mapper.BaseMapper;
 import com.baomidou.mybatisplus.core.metadata.IPage;
+
+import java.util.List;
 
 /**
 * @author liubo
@@ -15,6 +18,10 @@ import com.baomidou.mybatisplus.core.metadata.IPage;
 public interface ApartmentInfoMapper extends BaseMapper<ApartmentInfo> {
 
     IPage<ApartmentItemVo> pageApartmentItemByQuery(IPage<ApartmentItemVo> page , ApartmentQueryVo queryVo);
+
+    ApartmentInfo selectApartmentInfo(Long id);
+
+    List<RoomInfo> selectRoomListToApartmentId(Long id);
 }
 
 

@@ -3,5 +3,22 @@
         PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
         "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
 <mapper namespace="com.baidu.lease.web.admin.mapper.AttrValueMapper">
+    <select id="selectAttrValueVo" resultType="com.baidu.lease.web.admin.vo.attr.AttrValueVo">
+        select t3.*
+        from (select t1.name, t1.id, t1.attr_key_id as attrKeyId, t2.name as attrKeyName
+              from attr_value t1
+                       left join attr_key t2
+                                 on t1.attr_key_id = t2.id
+              where t1.is_deleted = 0
+                and t2.is_deleted = 0) t3
+                 right join (select *
+                             from room_attr_value
+                             where is_deleted = 0
+                               and room_id = #{id}) t4
+                            on t4.attr_value_id = t3.id
+    </select>
+    <!--因为是以属性信息列表这个中间表作为查询主体，所以此表作为主表进行表连接，同时，这个是对多的查询,
+    表明的是，经过一个房间id，查询其对应的多个属性值
+    -->
 
 </mapper>

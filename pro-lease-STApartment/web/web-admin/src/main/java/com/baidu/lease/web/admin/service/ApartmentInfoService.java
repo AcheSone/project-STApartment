@@ -1,6 +1,7 @@
 package com.baidu.lease.web.admin.service;
 
 import com.baidu.lease.model.entity.ApartmentInfo;
+import com.baidu.lease.model.entity.RoomInfo;
 import com.baidu.lease.model.enums.ReleaseStatus;
 import com.baidu.lease.web.admin.vo.apartment.ApartmentDetailVo;
 import com.baidu.lease.web.admin.vo.apartment.ApartmentItemVo;
@@ -9,6 +10,8 @@ import com.baidu.lease.web.admin.vo.apartment.ApartmentSubmitVo;
 import com.baomidou.mybatisplus.core.metadata.IPage;
 import com.baomidou.mybatisplus.extension.plugins.pagination.Page;
 import com.baomidou.mybatisplus.extension.service.IService;
+
+import java.util.List;
 
 /**
 * @author liubo
@@ -25,4 +28,6 @@ public interface ApartmentInfoService extends IService<ApartmentInfo> {
     void removeApartmentById(Long id);
 
     void updateReleaseStatusById(Long id, ReleaseStatus status);
+
+
 }
