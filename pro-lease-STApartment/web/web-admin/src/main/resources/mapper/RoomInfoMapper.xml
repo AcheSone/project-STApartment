@@ -3,5 +3,69 @@
         PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
         "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
 <mapper namespace="com.baidu.lease.web.admin.mapper.RoomInfoMapper">
+    <select id="saveRoomInPage" resultType="com.baidu.lease.web.admin.vo.room.RoomItemVo">
+        select t3.*
+        ,t4.province_name as 'apartmentInfo.provinceName'
+        ,t4.city_name as 'apartmentInfo.cityName'
+        ,t4.district_name as 'apartmentInfo.districtName'
+        ,t4.name as 'apartmentInfo.name'
+        ,t4.province_id 'apartmentInfo.provinceId'
+        ,t4.city_id as 'apartmentInfo.cityId'
+        ,t4.district_id as 'apartmentInfo.districtId'
+        ,t3.apartment_id as 'apartmentInfo.id'
 
+        from (select t1.room_number, t1.rent, t1.is_deleted, t2.lease_end_date, t2.status,t2.apartment_id,t1.is_release,t1.id
+        from room_info t1
+        left join
+        lease_agreement t2
+        on t1.id = t2.room_id
+        where t1.is_deleted = 0
+        and t2.is_deleted = 0) t3
+        left join apartment_info t4
+        on t3.apartment_id = t4.id
+        and status in (2,5)
+        <where>
+             t4.is_deleted = 0
+            <if test="queryVo.provinceId != null">
+                and province_id = #{queryVo.provinceId}
+            </if>
+            <if test="queryVo.cityId != null">
+                and city_id = #{queryVo.cityId}
+            </if>
+            <if test="queryVo.districtId != null">
+                and district_id = #{queryVo.districtId}
+            </if>
+            <if test="queryVo.apartmentId != null">
+                and apartment_id = #{queryVo.apartmentId}
+            </if>
+        </where>
+
+
+
+
+
+       <!-- select
+        t1.id , t1.room_number, ifnull(t3.rent,t1.rent) as rent, t1.is_release,
+        t2.id as 'apartmentInfo.id', t2.name as 'apartmentInfo.name',
+        t2.district_name as 'apartmentInfo.districtName',
+        t2.city_name as 'apartmentInfo.cityName', t2.province_name as 'apartmentInfo.provinceName',
+        ifnull(t3.status,0) as status , t3.lease_end_date
+        from room_info t1 inner join apartment_info t2 on t1.apartment_id = t2.id
+        left join lease_agreement t3 on t1.id = t3.room_id and t3.is_deleted = 0 and t3.status in (2,5)
+        <where>
+            t1.is_deleted = 0 and t2.is_deleted = 0
+            <if test="queryVo.provinceId!=null">
+                and t2.province_id=#{queryVo.provinceId}
+            </if>
+            <if test="queryVo.cityId!=null">
+                and t2.city_id=#{queryVo.cityId}
+            </if>
+            <if test="queryVo.districtId!=null">
+                and t2.district_id=#{queryVo.districtId}
+            </if>
+            <if test="queryVo.apartmentId!=null">
+                and t2.id = #{queryVo.apartmentId}
+            </if>
+        </where>-->
+    </select>
 </mapper>

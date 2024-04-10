@@ -27,5 +27,6 @@ mybatis-plus:
         logic-delete-field: isDeleted
         logic-not-delete-value: 0
 
-
+springdoc:
+  default-flat-param-object: true
 

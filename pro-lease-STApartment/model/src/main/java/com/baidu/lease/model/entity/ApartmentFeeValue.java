@@ -23,4 +23,9 @@ public class ApartmentFeeValue extends BaseEntity {
     @TableField(value = "fee_value_id")
     private Long feeValueId;
 
+    public ApartmentFeeValue(Long apartmentId,Long feeValueId){
+        this.apartmentId = apartmentId;
+        this.feeValueId = feeValueId;
+    }
+
 }

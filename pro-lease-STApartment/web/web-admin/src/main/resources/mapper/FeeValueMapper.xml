@@ -4,4 +4,16 @@
         "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
 <mapper namespace="com.baidu.lease.web.admin.mapper.FeeValueMapper">
 
+    <select id="selectListByApartmentId" resultType="com.baidu.lease.web.admin.vo.fee.FeeValueVo">
+        select t3.*, t4.apartment_id
+        from (select t1.id, t1.name , t1.unit, t2.name as feeKeyName,t2.id as feeKeyId
+              from fee_value t1
+                       left join fee_key t2
+                                 on (t1.fee_key_id = t2.id)
+              where (t1.is_deleted = 0)
+                and (t2.is_deleted = 0)) t3
+                 left join apartment_fee_value t4
+                           on t4.fee_value_id = t3.id
+        where t4.is_deleted = 0 and apartment_id = #{id}
+    </select>
 </mapper>

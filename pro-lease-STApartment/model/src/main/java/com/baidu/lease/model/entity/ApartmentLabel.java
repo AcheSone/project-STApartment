@@ -22,4 +22,8 @@ public class ApartmentLabel extends BaseEntity {
     @TableField(value = "label_id")
     private Long labelId;
 
+    public ApartmentLabel(Long apartmentId,Long labelId){
+        this.apartmentId = apartmentId;
+        this.labelId = labelId;
+    }
 }
