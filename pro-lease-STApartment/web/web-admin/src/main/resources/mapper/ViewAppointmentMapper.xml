@@ -4,4 +4,47 @@
         "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
 <mapper namespace="com.baidu.lease.web.admin.mapper.ViewAppointmentMapper">
 
+    <select id="pageAppointmentByQuery" resultType="com.baidu.lease.web.admin.vo.appointment.AppointmentVo">
+        select t1.id,
+        t1.name,
+        t1.phone,
+        t1.appointment_time,
+        t1.additional_info,
+        t1.appointment_status,
+        t1.apartment_id,
+        t2.district_name as 'apartmentInfo.districtName',
+        t2.city_name as 'apartmentInfo.cityName',
+        t2.province_name as 'apartmentInfo.provinceName',
+        t2.name as 'apartmentInfo.name',
+        t2.province_id,
+        t2.city_id,
+        t2.district_id,
+        t2.id as 'apartmentInfo.id'
+        from view_appointment t1
+        left join apartment_info t2
+        on t1.apartment_id = t2.id
+        <where>
+            t1.is_deleted = 0
+            and t2.is_deleted = 0
+            <if test="queryVo.provinceId != null">
+                and province_id = #{queryVo.provinceId}
+            </if>
+            <if test="queryVo.cityId != null">
+                and city_id = #{queryVo.cityId}
+            </if>
+            <if test="queryVo.districtId != null">
+                and district_id = #{queryVo.districtId}
+            </if>
+            <if test="queryVo.apartmentId != null">
+                and apartment_id = #{queryVo.apartmentId}
+            </if>
+            <if test="queryVo.name != null and queryVo.name != ''">
+                and t1.name like concat('%',#{queryVo.name},'%')
+            </if>
+            <if test="queryVo.phone != null and queryVo.phone != ''">
+                and t1.phone like concat('%',#{queryVo.phone},'%')
+            </if>
+        </where>
+
+    </select>
 </mapper>

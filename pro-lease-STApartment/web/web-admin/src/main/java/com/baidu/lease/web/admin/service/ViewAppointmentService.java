@@ -1,6 +1,7 @@
 package com.baidu.lease.web.admin.service;
 
 import com.baidu.lease.model.entity.ViewAppointment;
+import com.baidu.lease.model.enums.AppointmentStatus;
 import com.baidu.lease.web.admin.vo.appointment.AppointmentQueryVo;
 import com.baidu.lease.web.admin.vo.appointment.AppointmentVo;
 import com.baomidou.mybatisplus.core.metadata.IPage;
@@ -13,4 +14,7 @@ import com.baomidou.mybatisplus.extension.service.IService;
 */
 public interface ViewAppointmentService extends IService<ViewAppointment> {
 
+    IPage<AppointmentVo> pageAppointmentByQuery(IPage<AppointmentVo> page, AppointmentQueryVo queryVo);
+
+    void updateStatusById(Long id, AppointmentStatus status);
 }
