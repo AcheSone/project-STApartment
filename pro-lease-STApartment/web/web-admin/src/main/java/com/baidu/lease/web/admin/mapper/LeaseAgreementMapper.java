@@ -1,6 +1,8 @@
 package com.baidu.lease.web.admin.mapper;
 
 import com.baidu.lease.model.entity.LeaseAgreement;
+import com.baidu.lease.web.admin.vo.agreement.AgreementQueryVo;
+import com.baidu.lease.web.admin.vo.agreement.AgreementVo;
 import com.baomidou.mybatisplus.core.mapper.BaseMapper;
 import com.baomidou.mybatisplus.core.metadata.IPage;
 
@@ -11,6 +13,10 @@ import com.baomidou.mybatisplus.core.metadata.IPage;
 * @Entity com.baidu.lease.model.LeaseAgreement
 */
 public interface LeaseAgreementMapper extends BaseMapper<LeaseAgreement> {
+
+    IPage<AgreementVo> pageAgreementByQuery(IPage<AgreementVo> page, AgreementQueryVo queryVo);
+
+    AgreementVo getAgreementById(Long id);
 
 }
 

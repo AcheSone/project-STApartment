@@ -7,9 +7,10 @@ import org.springframework.stereotype.Component;
 
 import java.util.Date;
 
-//此类用作配置自动填充的内容（配置的是BaseEntity中的插入和更新时间的属性）
+//此类用作配置自动填充的内容，如@Schema标注的时间变量（配置的是BaseEntity中的插入和更新时间的属性）
 @Component
 public class MybatisMetaObjectHandler implements MetaObjectHandler {
+
 
     //为什么通过实现这个接口就可以进行配置？因为这是mybatis-plus提供的接口，与@Schema注解结合使用
     //分别为初次插入和更新时间做一个默认配置

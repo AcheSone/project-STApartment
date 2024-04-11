@@ -3,7 +3,12 @@ package com.baidu.lease.web.admin.service.impl;
 import com.baidu.lease.model.entity.SystemUser;
 import com.baidu.lease.web.admin.mapper.SystemUserMapper;
 import com.baidu.lease.web.admin.service.SystemUserService;
+import com.baidu.lease.web.admin.vo.system.user.SystemUserItemVo;
+import com.baidu.lease.web.admin.vo.system.user.SystemUserQueryVo;
+import com.baomidou.mybatisplus.core.metadata.IPage;
+import com.baomidou.mybatisplus.extension.plugins.pagination.Page;
 import com.baomidou.mybatisplus.extension.service.impl.ServiceImpl;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 /**
@@ -15,6 +20,22 @@ import org.springframework.stereotype.Service;
 public class SystemUserServiceImpl extends ServiceImpl<SystemUserMapper, SystemUser>
         implements SystemUserService {
 
+    @Autowired
+    private SystemUserMapper systemUserMapper;
+
+
+
+    @Override
+    public SystemUserItemVo getSystemUserById(Long id) {
+        SystemUserItemVo systemUserById = systemUserMapper.getSystemUserById(id);
+        return systemUserById;
+    }
+
+    @Override
+    public IPage<SystemUserItemVo> pageSystemUserByQuery(Page<SystemUserItemVo> page, SystemUserQueryVo queryVo) {
+        IPage<SystemUserItemVo> page1 = systemUserMapper.pageSystemUserByQuery(page,queryVo);
+        return page1;
+    }
 }
 
 

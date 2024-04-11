@@ -2,14 +2,21 @@
     这是一个用于生成和展示API文档的工具，
     同时还提供了在线的调试功能（通过在线发送响应请求debug）
 
+依赖引入
+<dependency>
+<groupId>com.github.xiaoymin</groupId>
+<artifactId>knife4j-openapi3-jakarta-spring-boot-starter</artifactId>
+<version>4.3.0</version>
+</dependency>
+
 使用knife4j要注意以下四个注解：
 
     ·@Tag，用作标注在要生成API文档的目标类上（通常是一个模块，一个控制器层的模块，具体表现为被@Controller标记的类），
-    在doc文档中生成一个对应的模块，通过name和description属性分别设置要生成的文档选项名称
+    在doc文档中生成一个对应的模块，通过name和description属性分别设置要生成的在线文档选项名称
 
     ·@Schema，用作标注在目标实体类上，（目标控制器模块的响应类）
 
-    ·@Operation，通常用于标记目标控制器模块的方法，表明了生成对应的API文档子选项，可对该子选项进行网页连接的debug测试
+    ·@Operation，通常用于标记目标控制器模块的方法，表明了生成对应的API在线文档子选项，可对该子选项进行网页连接的debug测试
     同时其中的子属性提供了生成更细节的文档信息，是可选的
 
     ·@Parameter，通常用于标记目标控制器模块的方法的形参上，为doc文档提供参数信息，

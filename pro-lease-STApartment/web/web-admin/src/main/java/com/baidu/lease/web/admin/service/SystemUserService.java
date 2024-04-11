@@ -4,6 +4,7 @@ import com.baidu.lease.model.entity.SystemUser;
 import com.baidu.lease.web.admin.vo.system.user.SystemUserItemVo;
 import com.baidu.lease.web.admin.vo.system.user.SystemUserQueryVo;
 import com.baomidou.mybatisplus.core.metadata.IPage;
+import com.baomidou.mybatisplus.extension.plugins.pagination.Page;
 import com.baomidou.mybatisplus.extension.service.IService;
 
 /**
@@ -13,4 +14,8 @@ import com.baomidou.mybatisplus.extension.service.IService;
 */
 public interface SystemUserService extends IService<SystemUser> {
 
+
+    SystemUserItemVo getSystemUserById(Long id);
+
+    IPage<SystemUserItemVo> pageSystemUserByQuery(Page<SystemUserItemVo> page, SystemUserQueryVo queryVo);
 }
