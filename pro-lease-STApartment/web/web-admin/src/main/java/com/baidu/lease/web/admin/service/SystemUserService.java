@@ -17,5 +17,6 @@ public interface SystemUserService extends IService<SystemUser> {
 
     SystemUserItemVo getSystemUserById(Long id);
 
-    IPage<SystemUserItemVo> pageSystemUserByQuery(Page<SystemUserItemVo> page, SystemUserQueryVo queryVo);
+    void pageSystemUserByQuery(IPage<SystemUserItemVo> page, SystemUserQueryVo queryVo);
+
 }

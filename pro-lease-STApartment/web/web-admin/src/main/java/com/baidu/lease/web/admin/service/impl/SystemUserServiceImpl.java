@@ -32,10 +32,12 @@ public class SystemUserServiceImpl extends ServiceImpl<SystemUserMapper, SystemU
     }
 
     @Override
-    public IPage<SystemUserItemVo> pageSystemUserByQuery(Page<SystemUserItemVo> page, SystemUserQueryVo queryVo) {
-        IPage<SystemUserItemVo> page1 = systemUserMapper.pageSystemUserByQuery(page,queryVo);
-        return page1;
+    public void pageSystemUserByQuery(IPage<SystemUserItemVo> page, SystemUserQueryVo queryVo) {
+        systemUserMapper.pageSystemUserByQuery(page,queryVo);
+
     }
+
+
 }
 
 

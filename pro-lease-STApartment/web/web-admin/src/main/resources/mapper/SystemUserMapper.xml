@@ -4,13 +4,13 @@
         "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
 <mapper namespace="com.baidu.lease.web.admin.mapper.SystemUserMapper">
     <select id="pageSystemUserByQuery" resultType="com.baidu.lease.web.admin.vo.system.user.SystemUserItemVo">
-        select t1.id, t1.name, t1.phone, t1.type, t1.status, t2.name as 'postName'
+        select t1.id, t1.name, t1.phone, t1.type, t1.status, t2.name as postName
         from system_user t1
         left join system_post t2
         on t1.post_id = t2.id
-        where t1.is_deleted = 0
-        and t2.is_deleted = 0
         <where>
+            and t1.is_deleted = 0
+            and t2.is_deleted = 0
             <if test="queryVo.name != null">
                 and t1.name like concat('%',#{queryVo.name},'%')
             </if>
@@ -19,6 +19,29 @@
             </if>
         </where>
     </select>
+    <!--<select id="pageSystemUserByQuery"
+            resultType="com.baidu.lease.web.admin.vo.system.user.SystemUserItemVo">
+        select su.id,
+        username,
+        su.name,
+        type,
+        phone,
+        avatar_url,
+        additional_info,
+        post_id,
+        sp.name post_name
+        from system_user su
+        left join system_post sp on su.post_id = sp.id and sp.is_deleted = 0
+        <where>
+            su.is_deleted = 0
+            <if test="queryVo.name != null and queryVo.name != ''">
+                and su.name like concat('%',#{queryVo.name},'%')
+            </if>
+            <if test="queryVo.phone !=null and queryVo.phone != ''">
+                and su.phone like concat('%',#{queryVo.phone},'%')
+            </if>
+        </where>
+    </select>-->
 
     <select id="getSystemUserById" resultType="com.baidu.lease.web.admin.vo.system.user.SystemUserItemVo">
         select t1.id, t1.name, t1.phone, t1.type, t1.status, t2.name as 'postName'
@@ -27,6 +50,6 @@
                            on t1.post_id = t2.id
         where t1.is_deleted = 0
           and t2.is_deleted = 0
-            and t1.id = #{id}
+          and t1.id = #{id}
     </select>
 </mapper>

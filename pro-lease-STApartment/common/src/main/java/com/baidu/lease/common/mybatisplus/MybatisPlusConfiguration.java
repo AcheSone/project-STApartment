@@ -11,7 +11,7 @@ import org.springframework.context.annotation.Configuration;
 
 @Configuration
 //组件扫描也放由common包中的启动类进行
-@MapperScan("com.baidu.lease.web.admin.mapper")
+@MapperScan("com.baidu.lease.web.*.mapper")
 public class MybatisPlusConfiguration {
     @Bean
     //新建mybatis拦截器

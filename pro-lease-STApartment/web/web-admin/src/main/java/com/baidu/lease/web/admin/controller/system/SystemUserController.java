@@ -2,11 +2,9 @@ package com.baidu.lease.web.admin.controller.system;
 
 
 import com.baidu.lease.common.result.Result;
-import com.baidu.lease.model.entity.SystemPost;
 import com.baidu.lease.model.entity.SystemUser;
 import com.baidu.lease.model.enums.BaseStatus;
 import com.baidu.lease.web.admin.mapper.SystemPostMapper;
-import com.baidu.lease.web.admin.service.SystemPostService;
 import com.baidu.lease.web.admin.service.SystemUserService;
 import com.baidu.lease.web.admin.vo.system.user.SystemUserItemVo;
 import com.baidu.lease.web.admin.vo.system.user.SystemUserQueryVo;
@@ -34,45 +32,19 @@ public class SystemUserController {
     @Autowired
     private SystemUserService systemUserService;
 
-    /*@Autowired
+   /* @Autowired
     private SystemPostMapper systemPostMapper;*/
 
     @Operation(summary = "根据条件分页查询后台用户列表")
     @GetMapping("page")
     public Result<IPage<SystemUserItemVo>> page(@RequestParam long current, @RequestParam long size, SystemUserQueryVo queryVo) {
-        Page<SystemUserItemVo> page = Page.of(current, size);
-        IPage<SystemUserItemVo> page1 = systemUserService.pageSystemUserByQuery(page, queryVo);
-        return Result.ok(page1);
+        //已经完成，纯粹自己犯蠢，一共就两条数据，分页测试的参数还传了查看第二页，每页显示两条
+        IPage<SystemUserItemVo> page = Page.of(current, size);
+        systemUserService.pageSystemUserByQuery(page, queryVo);
+        return Result.ok(page);
     }
 
 
-        /*         IPage<SystemUserItemVo> page = Page.of(current, size);
-
-        List<SystemUser> systemUserList = systemUserService.list();
-
-        List<SystemUserItemVo> systemUserItemVoList = new ArrayList<>();
-
-        for (int i = 0; i < systemUserList.size(); i++) {
-            SystemUserItemVo systemUserItemVo1 = new SystemUserItemVo();
-            BeanUtils.copyProperties(systemUserList.get(i),systemUserItemVo1);
-            systemUserItemVoList.add(systemUserItemVo1);
-        }
-
-        List<Long> longs = systemUserList.stream().map(systemUser -> systemUser.getPostId()).toList();
-        for (Long aLong : longs) {
-            SystemPost systemPost = systemPostMapper.selectById(aLong);
-            String name = systemPost.getName();
-            Long id = systemPost.getId();
-            for (SystemUserItemVo systemUserItemVo : systemUserItemVoList) {
-
-                if (systemUserItemVo.getPostId() == id){
-                    systemUserItemVo.setPostName(name);
-                }
-            }
-        }
-        page.setRecords(systemUserItemVoList);
-        System.out.println(systemUserItemVoList);
-*/
 
 
     @Operation(summary = "根据ID查询后台用户信息")
@@ -119,3 +91,56 @@ public class SystemUserController {
         return Result.ok();
     }
 }
+
+
+
+
+
+
+
+
+
+
+
+/*
+    IPage<SystemUserItemVo> page = Page.of(current, size);
+    LambdaQueryWrapper<SystemUser> like = null;
+        if (queryVo.getName() != null){
+
+                like = new LambdaQueryWrapper<SystemUser>().like(SystemUser::getName, queryVo.getName());
+        if (queryVo.getPhone() != null){
+        like.like(SystemUser::getPhone,queryVo.getPhone());
+        }
+        }
+        List<SystemUser> systemUserList = systemUserList = systemUserService.list(like);
+
+
+        *//*List<SystemUserItemVo> systemUserItemVoList = new ArrayList<>();*//*
+
+        *//*for (int i = 0; i < systemUserList.size(); i++) {
+            SystemUserItemVo systemUserItemVo1 = new SystemUserItemVo();
+            BeanUtils.copyProperties(systemUserList.get(i), systemUserItemVo1);
+            systemUserItemVoList.add(systemUserItemVo1);
+        }*//*
+
+        List<SystemUserItemVo> systemUserItemVoList1 = systemUserList.stream().map(systemUser -> {
+        SystemUserItemVo systemUserItemVo1 = new SystemUserItemVo();
+        BeanUtils.copyProperties(systemUser, systemUserItemVo1);
+        return systemUserItemVo1;
+        }).toList();
+
+        List<Long> longs = systemUserList.stream().map(systemUser -> systemUser.getPostId()).toList();
+        for (Long aLong : longs) {
+        SystemPost systemPost = systemPostMapper.selectById(aLong);
+        String name = systemPost.getName();
+        Long id = systemPost.getId();
+        for (SystemUserItemVo systemUserItemVo : systemUserItemVoList1) {
+
+        if (systemUserItemVo.getPostId() == id) {
+        systemUserItemVo.setPostName(name);
+        }
+        }
+        }
+        page.setRecords(systemUserItemVoList1);
+        System.out.println(systemUserItemVoList1);
+        return Result.ok(page);*/
