@@ -5,13 +5,15 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="c083fde1-88de-471c-84a9-b17317a26911" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/pro-lease-STApartment/common/src/main/java/com/baidu/lease/common/constant/RedisConstant.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/pro-lease-STApartment/web/web-admin/src/main/java/com/baidu/lease/web/admin/controller/login/readmeToLoginController.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/pro-lease-STApartment/web/web-admin/src/main/resources/application-redis.yaml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pro-lease-STApartment/common/src/main/java/com/baidu/lease/common/mybatisplus/MybatisPlusConfiguration.java" beforeDir="false" afterPath="$PROJECT_DIR$/pro-lease-STApartment/common/src/main/java/com/baidu/lease/common/mybatisplus/MybatisPlusConfiguration.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pro-lease-STApartment/web/web-admin/src/main/java/com/baidu/lease/web/admin/controller/system/SystemUserController.java" beforeDir="false" afterPath="$PROJECT_DIR$/pro-lease-STApartment/web/web-admin/src/main/java/com/baidu/lease/web/admin/controller/system/SystemUserController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pro-lease-STApartment/web/web-admin/src/main/java/com/baidu/lease/web/admin/mapper/SystemUserMapper.java" beforeDir="false" afterPath="$PROJECT_DIR$/pro-lease-STApartment/web/web-admin/src/main/java/com/baidu/lease/web/admin/mapper/SystemUserMapper.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pro-lease-STApartment/web/web-admin/src/main/java/com/baidu/lease/web/admin/service/SystemUserService.java" beforeDir="false" afterPath="$PROJECT_DIR$/pro-lease-STApartment/web/web-admin/src/main/java/com/baidu/lease/web/admin/service/SystemUserService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pro-lease-STApartment/web/web-admin/src/main/java/com/baidu/lease/web/admin/service/impl/SystemUserServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/pro-lease-STApartment/web/web-admin/src/main/java/com/baidu/lease/web/admin/service/impl/SystemUserServiceImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pro-lease-STApartment/web/web-admin/src/main/resources/mapper/SystemUserMapper.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pro-lease-STApartment/web/web-admin/src/main/resources/mapper/SystemUserMapper.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pro-lease-STApartment/web/web-admin/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pro-lease-STApartment/web/web-admin/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pro-lease-STApartment/web/web-admin/src/main/java/com/baidu/lease/web/admin/controller/login/LoginController.java" beforeDir="false" afterPath="$PROJECT_DIR$/pro-lease-STApartment/web/web-admin/src/main/java/com/baidu/lease/web/admin/controller/login/LoginController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pro-lease-STApartment/web/web-admin/src/main/java/com/baidu/lease/web/admin/service/LoginService.java" beforeDir="false" afterPath="$PROJECT_DIR$/pro-lease-STApartment/web/web-admin/src/main/java/com/baidu/lease/web/admin/service/LoginService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pro-lease-STApartment/web/web-admin/src/main/java/com/baidu/lease/web/admin/service/impl/LoginServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/pro-lease-STApartment/web/web-admin/src/main/java/com/baidu/lease/web/admin/service/impl/LoginServiceImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pro-lease-STApartment/web/web-admin/src/main/resources/application.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/pro-lease-STApartment/web/web-admin/src/main/resources/application.yaml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -210,7 +212,7 @@
       <workItem from="1712366135958" duration="25335000" />
       <workItem from="1712621692912" duration="35499000" />
       <workItem from="1712712588327" duration="32697000" />
-      <workItem from="1712795132719" duration="40776000" />
+      <workItem from="1712795132719" duration="50255000" />
     </task>
     <task id="LOCAL-00001" summary="这是一个测试mybatis——plus的提交">
       <created>1712045418305</created>
@@ -282,7 +284,14 @@
       <option name="project" value="LOCAL" />
       <updated>1712843056067</updated>
     </task>
-    <option name="localTasksCounter" value="11" />
+    <task id="LOCAL-00011" summary="2024.4.10&#10;后台登陆管理前代码修正">
+      <created>1712893744761</created>
+      <option name="number" value="00011" />
+      <option name="presentableId" value="LOCAL-00011" />
+      <option name="project" value="LOCAL" />
+      <updated>1712893744761</updated>
+    </task>
+    <option name="localTasksCounter" value="12" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -298,18 +307,8 @@
     <MESSAGE value="2024.4.10&#10;已完成公寓信息管理全部内容" />
     <MESSAGE value="2024.4.10&#10;已完成到预约看房功能，即将开始租约管理功能的编写" />
     <MESSAGE value="2024.4.10&#10;后台分页查询有问题，尚未解决" />
-    <option name="LAST_COMMIT_MESSAGE" value="2024.4.10&#10;后台分页查询有问题，尚未解决" />
-  </component>
-  <component name="XDebuggerManager">
-    <breakpoint-manager>
-      <breakpoints>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/pro-lease-STApartment/web/web-admin/src/main/java/com/baidu/lease/web/admin/controller/system/SystemUserController.java</url>
-          <line>42</line>
-          <option name="timeStamp" value="15" />
-        </line-breakpoint>
-      </breakpoints>
-    </breakpoint-manager>
+    <MESSAGE value="2024.4.10&#10;后台登陆管理前代码修正" />
+    <option name="LAST_COMMIT_MESSAGE" value="2024.4.10&#10;后台登陆管理前代码修正" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />

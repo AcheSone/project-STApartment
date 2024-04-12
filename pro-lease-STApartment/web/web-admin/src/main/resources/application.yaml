@@ -12,6 +12,11 @@ spring:
   jackson:
     date-format: yyyy-MM-dd HH:mm:ss
     time-zone: GMT+8
+  data:
+     redis:
+       host: 192.168.179.128
+       port: 6379
+       database: 0
 
   #这里引入了minion的配置文件
   profiles:
